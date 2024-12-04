@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
 export const metadata = {
-    title: 'Responsive Home Template',
-    description: 'Created by Doni',
+    title: "Home | Responsive Template",
+    description: "Created by Doni",
 };
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <HeroSection
                 title="Welcome"
-                subtitle="to Doni's portfolio."
+                subtitle="to Doni\'s portfolio."
                 image="/images/webp/wf_home"
                 alt="Watercolor flowers"
             />

@@ -43,7 +43,7 @@ const SequentialText = ({ title, subtitle }) => {
             </div>
 
             {/* subtitle Animation */}
-            <motion.h4
+            <motion.h2
                 className="italic"
                 variants={subtitleVariants}
                 initial="hidden"
@@ -53,7 +53,7 @@ const SequentialText = ({ title, subtitle }) => {
                 }}
             >
                 {subtitle}
-            </motion.h4>
+            </motion.h2>
         </div>
     );
 };

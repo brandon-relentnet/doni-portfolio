@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
 export const metadata = {
-    title: 'Responsive Contact Template',
-    description: 'Created by Doni',
+    title: "Contact | Responsive Template",
+    description: "Created by Doni",
 };
 
 export default function Contact() {

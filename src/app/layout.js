@@ -5,8 +5,8 @@ import { ThemeProvider } from 'next-themes';
 
 /* Set the title and description for the website */
 export const metadata = {
-  title: 'Responsive Website Template',
-  description: 'Created by Doni',
+  title: "Responsive Template",
+  description: "Created by Doni",
 };
 
 export default function RootLayout({ children }) {

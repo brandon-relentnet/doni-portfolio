@@ -19,8 +19,6 @@ export default function HamburgerButton({ menuOpen, toggleMenu }) {
             <motion.div
                 variants={iconVariants}
                 animate={menuOpen ? 'open' : 'closed'}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
             >
                 {menuOpen ? <FiX /> : <FiMenu />}
             </motion.div>

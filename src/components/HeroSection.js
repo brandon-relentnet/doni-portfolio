@@ -1,5 +1,3 @@
-"use client";
-
 import SequentialText from "./SequentialText";
 
 export default function HeroSection({ title, subtitle, image, alt }) {
@@ -14,17 +12,14 @@ export default function HeroSection({ title, subtitle, image, alt }) {
       >
         <source
           srcSet={`${baseImageName}-2xl.webp 1536w, ${baseImageName}-xl.webp 1280w, ${baseImageName}-lg.webp 1024w, ${baseImageName}-md.webp 768w, ${baseImageName}-sm.webp 480w`}
-          sizes="(max-width: 639px) 480px, 
-                 (max-width: 767px) 768px, 
-                 (max-width: 1023px) 1024px, 
-                 (max-width: 1279px) 1280px, 
-                 1536px"
+        sizes="(max-width: 639px) 480px, (max-width: 767px) 768px, (max-width: 1023px) 1024px, (max-width: 1279px) 1280px, 1536px"
           type="image/webp"
         />
         <img
           src={`${baseImageName}-lg.webp`} // Fallback image for browsers that don't support WebP
           alt={alt}
           className="max-w-5xl md:w-2/3 w-1/2 h-auto"
+          loading="eager"
         />
       </picture>
 
@@ -34,17 +29,14 @@ export default function HeroSection({ title, subtitle, image, alt }) {
       >
         <source
           srcSet={`${baseImageName}-2xl.webp 1536w, ${baseImageName}-xl.webp 1280w, ${baseImageName}-lg.webp 1024w, ${baseImageName}-md.webp 768w, ${baseImageName}-sm.webp 480w`}
-          sizes="(max-width: 639px) 480px, 
-                 (max-width: 767px) 768px, 
-                 (max-width: 1023px) 1024px, 
-                 (max-width: 1279px) 1280px, 
-                 1536px"
+          sizes="(max-width: 639px) 480px, (max-width: 767px) 768px, (max-width: 1023px) 1024px, (max-width: 1279px) 1280px, 1536px"
           type="image/webp"
         />
         <img
           src={`${baseImageName}-lg.webp`} // Fallback image
           alt={alt}
           className="max-w-5xl md:w-2/3 w-1/2 h-auto"
+          loading="eager"
         />
       </picture>
 
