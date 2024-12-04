@@ -18,9 +18,9 @@ export default function HeroSection({ title, subtitle, image, alt }) {
 
     return (
       <div className={className} style={{ width: "50%", height: "auto" }}>
-        <div className="relative w-full border-2 flex justify-center items-center">
+        <div className="relative w-full flex justify-center items-center">
           <Image
-            src={getImageSrc("2xl")} // Default high-resolution image
+            src={getImageSrc("lg")}
             alt={alt}
             sizes="(max-width: 639px) 50vw, (max-width: 1023px) 75vw, 100vw" // Tailwind handles this dynamically
             width={800}
