@@ -7,7 +7,7 @@ export default function HeroSection({ title, subtitle, image, alt }) {
   // Common image sources and sizes
   const srcSet = `${baseImageName}-2xl.webp 1536w, ${baseImageName}-xl.webp 1280w, ${baseImageName}-lg.webp 1024w, ${baseImageName}-md.webp 768w, ${baseImageName}-sm.webp 480w`;
   const sizes =
-    "(max-width: 639px) 480px, (max-width: 767px) 768px, (max-width: 1023px) 1024px, (max-width: 1279px) 1280px, 1536px";
+    "(max-width: 640px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1278px) 1280px, 1536px";
   const fallbackSrc = `${baseImageName}-lg.webp`;
 
   // Reusable component for the flower images
