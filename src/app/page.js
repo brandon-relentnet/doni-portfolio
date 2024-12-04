@@ -3,6 +3,11 @@ import dynamic from "next/dynamic";
 
 const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
+export const metadata = {
+    title: 'Responsive Home Template',
+    description: 'Created by Doni',
+};
+
 export default function Home() {
     return (
         <>

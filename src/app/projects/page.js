@@ -3,13 +3,18 @@ import dynamic from "next/dynamic";
 
 const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
+export const metadata = {
+    title: 'Responsive Projects Template',
+    description: 'Created by Doni',
+};
+
 export default function Projects() {
     return (
         <>
             <HeroSection
                 title="Projects"
                 subtitle="Check 'em out."
-                image="/images/wf_projects.png"
+                image="/images/webp/wf_projects"
                 alt="Watercolor flowers"
             />
 
