@@ -13,7 +13,7 @@ export default function Projects() {
         <>
             <HeroSection
                 title="Projects"
-                subtitle="Check \'em out."
+                subtitle="Check &apos;em out."
                 image="/images/webp/wf_projects"
                 alt="Watercolor flowers"
             />
