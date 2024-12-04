@@ -1,4 +1,3 @@
-// ScrollProgressBar.jsx
 'use client';
 
 import { motion, useScroll } from 'motion/react';

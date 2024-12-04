@@ -33,7 +33,7 @@ export default function HeroSection({ title, subtitle, image, alt }) {
   };
 
   return (
-    <section className="relative w-screen flex justify-center items-center py-20 bg-base overflow-hidden">
+    <section className="relative w-screen flex justify-center items-center py-28 bg-base overflow-hidden">
       {/* Left Flower */}
       <FlowerImage position="left" alt={`${alt} (left)`} />
 

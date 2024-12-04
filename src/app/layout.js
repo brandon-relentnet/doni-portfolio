@@ -1,7 +1,9 @@
 import '@/css/globals.css';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/navbar/Navbar';
+import dynamic from 'next/dynamic';
 import { ThemeProvider } from 'next-themes';
+
+const Footer = dynamic(() => import('@/components/Footer'));
+const Navbar = dynamic(() => import('@/components/navbar/Navbar'));
 
 /* Set the title and description for the website */
 export const metadata = {

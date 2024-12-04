@@ -1,7 +1,7 @@
-import LoremIpsum from "@/components/LorumImpsum";
 import dynamic from "next/dynamic";
 
 const HeroSection = dynamic(() => import("@/components/HeroSection"));
+const LoremIpsum = dynamic(() => import("@/components/LoremIpsum"));
 
 export const metadata = {
   title: "About | Responsive Template",

@@ -1,7 +1,9 @@
-import Socials from './Socials';
-import ThemeSwitch from './ThemeSwitch';
-import ClientNavbar from './ClientNavbar';
-import ScrollProgressBar from './ScrollProgressBar';
+import dynamic from "next/dynamic";
+
+const Socials = dynamic(() => import('./Socials'));
+const ThemeSwitch = dynamic(() => import('./ThemeSwitch'));
+const ClientNavbar = dynamic(() => import('./ClientNavbar'));
+const ScrollProgressBar = dynamic(() => import('./ScrollProgressBar'));
 
 export default function Navbar() {
     return (

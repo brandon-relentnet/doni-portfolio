@@ -18,13 +18,13 @@ export default function LoremIpsum() {
                         ipsum tellus, eu tincidunt neque tincidunt a.
                     </p>
                     <h4>H4 Header</h4>
-                    <p className="p-2 bg-mantle rounded-lg shadow-inner"> 
+                    <p className="p-2 bg-mantle rounded-lg shadow-inner italic"> 
                         Pellentesque id lacus pulvinar elit pulvinar pretium ac non urna.
                         Mauris id mauris vel arcu commodo venenatis. Aliquam eu risus arcu.
                         Proin sit amet lacus mollis, semper massa ut, rutrum mi.
                     </p>
                     <h5>H5 Header</h5>
-                    <p className="p-2 bg-surface0 rounded-lg shadow">
+                    <p className="p-2 bg-surface0 rounded-lg shadow !text-text">
                         Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla
                         aliquet. Pellentesque auctor vehicula malesuada. Aliquam id feugiat
                         sem, sit amet tempor nulla. Quisque fermentum felis faucibus, vehicula

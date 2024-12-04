@@ -1,8 +1,11 @@
 'use client';
 
+import dynamic from "next/dynamic";
 import { useState } from 'react';
-import HamburgerButton from './HamburgerButton';
-import NavLinks from './NavLinks';
+
+const HamburgerButton = dynamic(() => import('./HamburgerButton'));
+const NavLinks = dynamic(() => import('./NavLinks'));
+
 
 export default function ClientNavbar() {
     const [menuOpen, setMenuOpen] = useState(false);
