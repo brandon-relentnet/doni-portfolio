@@ -3,7 +3,10 @@ export default function LoremIpsum() {
         <>
             <article>
                 {/* Responsive text testing */}
-                <div className="mb-32">
+                <h2 className="mb-16 text-center">Style Examples</h2>
+
+                <h3 className="mb-4 ml-2">Section Header</h3>
+                <div className="mb-32 section-container">
                     <h2>H2 Header</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
@@ -18,13 +21,13 @@ export default function LoremIpsum() {
                         ipsum tellus, eu tincidunt neque tincidunt a.
                     </p>
                     <h4>H4 Header</h4>
-                    <p className="p-2 bg-mantle rounded-lg shadow-inner italic"> 
+                    <p className="p-2 bg-mantle rounded-lg shadow-inner italic">
                         Pellentesque id lacus pulvinar elit pulvinar pretium ac non urna.
                         Mauris id mauris vel arcu commodo venenatis. Aliquam eu risus arcu.
                         Proin sit amet lacus mollis, semper massa ut, rutrum mi.
                     </p>
                     <h5>H5 Header</h5>
-                    <p className="p-2 bg-surface0 rounded-lg shadow !text-text">
+                    <p className="p-2 bg-surface1 rounded-lg shadow !text-text">
                         Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla
                         aliquet. Pellentesque auctor vehicula malesuada. Aliquam id feugiat
                         sem, sit amet tempor nulla. Quisque fermentum felis faucibus, vehicula
@@ -40,11 +43,11 @@ export default function LoremIpsum() {
                     </p>
                 </div>
 
-                <h2 className="italic mb-16">Rest of the Lorum Ipsum...</h2>
-
                 {/* Rest of the Lorum Ipsum */}
-                <div className="mb-12">
-                    <h3>Sub-header</h3>
+                <h2 className="italic mb-16 text-center">Rest of the Lorum Ipsum...</h2>
+
+                <h3 className="mb-4 ml-2">Section Header</h3>
+                <div className="mb-12 section-container">
                     <p>
                         In eget sodales arcu, consectetur efficitur metus. Duis efficitur
                         tincidunt odio, sit amet laoreet massa fringilla eu.
@@ -60,8 +63,9 @@ export default function LoremIpsum() {
                         leo vitae tristique rutrum. Donec ut volutpat ante, ut suscipit leo.
                     </p>
                 </div>
-                <div className="mb-12">
-                    <h3>Sub-header</h3>
+
+                <h3 className="mb-4 ml-2">Section Header</h3>
+                <div className="mb-12 section-container">
                     <p>
                         Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla
                         aliquet. Pellentesque auctor vehicula malesuada. Aliquam id feugiat
@@ -88,8 +92,9 @@ export default function LoremIpsum() {
                         leo vitae tristique rutrum. Donec ut volutpat ante, ut suscipit leo.
                     </p>
                 </div>
-                <div className="mb-12">
-                    <h3>Sub-header</h3>
+
+                <h3 className="mb-4 ml-2">Section Header</h3>
+                <div className="mb-12 section-container">
                     <p>
                         Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla
                         aliquet. Pellentesque auctor vehicula malesuada. Aliquam id feugiat

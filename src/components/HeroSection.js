@@ -18,14 +18,22 @@ export default function HeroSection({ title, subtitle, image, alt }) {
 
     return (
       <div className={className} style={{ width: "50%", height: "auto" }}>
-        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+        <div className="relative w-full border-2 flex justify-center items-center">
           <Image
-            src={getImageSrc("2xl")} // Default image size
+            src={getImageSrc("2xl")} // Default high-resolution image
             alt={alt}
-            fill // Allows the image to stretch to fit its parent container
-            sizes="(max-width: 639px) 50vw, (max-width: 1023px) 75vw, 100vw"
-            priority // Prioritize both images
+            sizes="(max-width: 639px) 50vw, (max-width: 1023px) 75vw, 100vw" // Tailwind handles this dynamically
+            width={800}
+            height={800}
+            priority // Prioritize image loading
             className="object-contain" // Maintains image aspect ratio
+            srcSet={`
+              ${getImageSrc("sm")} 640w,
+              ${getImageSrc("md")} 1024w,
+              ${getImageSrc("lg")} 1280w,
+              ${getImageSrc("xl")} 1536w,
+              ${getImageSrc("2xl")} 1920w
+            `}
           />
         </div>
       </div>
@@ -33,7 +41,7 @@ export default function HeroSection({ title, subtitle, image, alt }) {
   };
 
   return (
-    <section className="relative w-screen flex justify-center items-center py-28 bg-base overflow-hidden">
+    <section className="relative w-screen flex justify-center items-center pt-28 mb-28 bg-base overflow-hidden">
       {/* Left Flower */}
       <FlowerImage position="left" alt={`${alt} (left)`} />
 
