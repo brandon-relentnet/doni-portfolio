@@ -1,51 +1,49 @@
+import Image from "next/image";
 import SequentialText from "./SequentialText";
 
 export default function HeroSection({ title, subtitle, image, alt }) {
   // Derive the base image name (without extension)
   const baseImageName = image.replace(/\.(png|jpg|jpeg|webp)$/, "");
 
-  // Common image sources and sizes
-  const srcSet = `${baseImageName}-2xl.webp 1536w, ${baseImageName}-xl.webp 1280w, ${baseImageName}-lg.webp 1024w, ${baseImageName}-md.webp 768w, ${baseImageName}-sm.webp 480w`;
-  const sizes =
-    "(max-width: 640px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1278px) 1280px, 1536px";
-  const fallbackSrc = `${baseImageName}-lg.webp`;
+  // Generate image URLs for Next.js Image component
+  const getImageSrc = (size) => `${baseImageName}-${size}.webp`;
 
   // Reusable component for the flower images
-  const FlowerImage = ({ position }) => {
+  const FlowerImage = ({ position, alt }) => {
     const isLeft = position === "left";
 
-    const sideClass = isLeft ? "left-0" : "right-0";
-    const translateXPrefix = isLeft ? "-" : "";
-    const translateXClass = `${translateXPrefix}translate-x-16 sm:${translateXPrefix}translate-x-32 md:${translateXPrefix}translate-x-72 xl:${translateXPrefix}translate-x-36 2xl:${translateXPrefix}translate-x-6`;
-    const rotationClass = isLeft ? "" : "rotate-180";
-
-    const className = `absolute ${sideClass} top-1/2 transform -translate-y-1/2 ${translateXClass} ${rotationClass} pointer-events-none mt-0 md:mt-10 z-10 opacity-30`;
+    // Adjust side and transformation classes for alignment
+    const sideClass = isLeft ? "-left-32" : "-right-32 rotate-180";
+    const className = `${sideClass} pointer-events-none z-10 opacity-30 relative`;
 
     return (
-      <picture className={className}>
-        <source srcSet={srcSet} sizes={sizes} type="image/webp" />
-        <img
-          src={fallbackSrc}
-          alt={alt}
-          className="max-w-5xl md:w-2/3 w-1/2 h-auto"
-          loading="eager"
-        />
-      </picture>
+      <div className={className} style={{ width: "50%", height: "auto" }}>
+        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+          <Image
+            src={getImageSrc("lg")} // Default image size
+            alt={alt}
+            fill // Allows the image to stretch to fit its parent container
+            sizes="(max-width: 639px) 50vw, (max-width: 1023px) 75vw, 100vw"
+            priority // Prioritize both images
+            className="object-contain" // Maintains image aspect ratio
+          />
+        </div>
+      </div>
     );
   };
 
   return (
-    <section className="relative flex justify-center items-center py-20 my-20 sm:mt-36 sm:py-20 md:mt-0 md:py-0 md:min-h-screen bg-base overflow-visible">
+    <section className="relative w-screen flex justify-center items-center py-20 bg-base overflow-hidden">
       {/* Left Flower */}
-      <FlowerImage position="left" />
-
-      {/* Right Flower */}
-      <FlowerImage position="right" />
+      <FlowerImage position="left" alt={`${alt} (left)`} />
 
       {/* Text Content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="absolute z-20 text-center px-4">
         <SequentialText title={title} subtitle={subtitle} />
       </div>
+
+      {/* Right Flower */}
+      <FlowerImage position="right" alt={`${alt} (right)`} />
     </section>
   );
 }
