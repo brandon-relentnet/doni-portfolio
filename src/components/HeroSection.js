@@ -20,7 +20,7 @@ export default function HeroSection({ title, subtitle, image, alt }) {
       <div className={className} style={{ width: "50%", height: "auto" }}>
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
           <Image
-            src={getImageSrc("lg")} // Default image size
+            src={getImageSrc("2xl")} // Default image size
             alt={alt}
             fill // Allows the image to stretch to fit its parent container
             sizes="(max-width: 639px) 50vw, (max-width: 1023px) 75vw, 100vw"
