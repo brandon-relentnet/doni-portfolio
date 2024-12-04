@@ -12,7 +12,7 @@ export default function Socials() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
             >
-                <a href="#">
+                <a href="https://github.com/brandon-relentnet/responsive-website-template">
                     <FaGithub className="text-3xl text-text hover:text-subtext0" />
                 </a>
             </motion.div>

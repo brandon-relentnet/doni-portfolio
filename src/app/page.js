@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <HeroSection
                 title="Welcome"
-                subtitle="to Doni's portfoio."
+                subtitle="to Doni's portfolio."
                 image="/images/wf_home.png"
                 alt="Watercolor flowers"
             />
