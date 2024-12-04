@@ -26,6 +26,7 @@ const ThemeSwitch = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      aria-label="change theme"
       className='text-text text-3xl hover:text-subtext0'
     >
       {theme === 'light' ? <FaSun /> : <FaMoon />}
