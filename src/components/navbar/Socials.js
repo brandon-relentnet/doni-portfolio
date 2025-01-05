@@ -1,7 +1,7 @@
 'use client';
 
 import { FaGithub } from "react-icons/fa";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Socials() {
     return (
